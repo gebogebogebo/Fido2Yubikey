@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>サンプル１</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <!--外部ファイルに記述-->
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="cbor.js" ></script>
+    <style type="text/css">
+      body{font-size:16px}
+    </style>
+  </head>
+
+  <body>
+    <h1>青いユビキーテストver2</h1>
+
+    <input type="button" value="PublicKeyCredentialテスト" onclick="checkFirst();"/>
+    <br/>    
+    <br/>    
+    <input type="button" value="create()" onclick="createYubikey();"/>
+    <br/>    
+    <div id="credentialId">[ -- create()したcredentialId -- ]</div>
+    <br/>    
+    <br/>    
+    <input type="button" value="get()" onclick="getYubikey();"/>    
+  </body>
+</html>
