@@ -32,11 +32,11 @@ function createYubikey(){
 
     // このあと、Yubikeyがピカピカ光るのでタッチするとthenかcatchに入る
     navigator.credentials.create({ "publicKey": options })
-        .then(function (credential) {
-        //alert("navigator.credentials.create(assertion)-OK");
+        .then(function (attestation) {
+        //alert("navigator.credentials.create(attestation)-OK");
 
         //このサンプルでほしいのはcredentialIdだけ
-        const {id, rawId, response, type} = credential; // type = "public-key"
+        const {id, rawId, response, type} = attestation; // type = "public-key"
         const {attestationObject, clientDataJSON} = response;   
         
         // <attestationObject>
